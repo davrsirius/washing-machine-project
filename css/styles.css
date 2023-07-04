@@ -1,3 +1,14 @@
+:root {
+  --body-color: #DE8A89;
+  --font-color: #FFEFF0;
+  --pale-font: #EAB8B6;
+  --slider-color: #EBB9B7;
+  --timer-bg: #3E3C3D;
+  --temperature-bg: #353333;
+  --load-bg: #201E1E;
+  --button-bg: #131313;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -16,11 +27,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: var(--body-color);
   color: #222;
+
 }
 
 img {
@@ -44,16 +56,215 @@ img {
 /* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
+  padding: 100px;
 }
+
+
+
+
+.mode-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.mode-name+.mode-name {
+  margin-left: 100px;
+}
+
+.mode-name {
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--pale-font);
+}
+
+.mode-name-active {
+  color: var(--font-color);
+}
+
+.washing-warning {
+  color: var(--font-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+
+/* MODE SCREEN */
+
+.mode-screen {
+  background-color: #ccc;
+  height: 366px;
+  display: flex;
+}
+
+.mode-screen-item {
+  width: 366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* .mode-screen-item:hover {
+  transform: scale(1.01);
+}
+ */
+
+
+.timer {
+  background-color: var(--timer-bg);
+}
+
+.temperature {
+  background-color: var(--temperature-bg);
+}
+
+.load {
+  background-color: var(--load-bg);
+}
+
+.mode-screen-title {
+  color: var(--body-color);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.mode-screen-description {
+  color: var(--font-color);
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+
+.btn-start {
+  position: absolute;
+  bottom: -30px;
+  left: 22px;
+  width: 320px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: bottom 0.3s ease;
+  /* z-index: 10; */
+}
+
+.btn-start:hover {
+  bottom: -20px;
+}
+.btn-start:active {
+  background-color: #1f1f1f;
+}
+
+.left-slider {  
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-color: var(--slider-color);
+  position: absolute;
+  top: 0;
+  left: -120px;
+}
+
+.left-slider:hover {
+  opacity: 0.9;
+}
+
+.left-slider::before {
+  content: "";
+  border: 10px solid #444;
+  border-top: 10px solid var(--slider-color);
+  border-bottom: 10px solid var(--slider-color);
+  border-left: 10px solid var(--slider-color);  
+  background-color: #555;
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+
+.right-slider {
+  position: absolute;
+  top: 0;
+  right: -120px;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-color: var(--slider-color);
+}
+
+
+.right-slider:hover {
+  opacity: 0.9;
+}
+
+.right-slider::before {
+  content: "";
+  border: 10px solid var(--slider-color);
+  border-top: 10px solid var(--slider-color);
+  border-bottom: 10px solid var(--slider-color);
+  border-left: 10px solid #444;  
+  background-color: #555;
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RETINA BACKGROUNDS */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}

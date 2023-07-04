@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +12,45 @@
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body>
+  <main class="main-content">
+    <div class="container">
+      <ul class="mode-list">
+        <li class="mode-name mode-name-active">Synthetic</li>
+        <li class="mode-name">Wool</li>
+        <li class="mode-name">Denim</li>
+        <li class="mode-name">Silk</li>
+        <li class="mode-name">Linen</li>
+      </ul>
+      <p class="washing-warning">Loads should be under 8 pounds. It is recommended using neutral detergent to prevent
+        <br> damage to the cloth and to improve the washing results.</p>
+
+      <!-- Mode Screen -->
+      <div class="mode-screen">
+        <div class="timer mode-screen-item">
+          <h3 class="mode-screen-title">Timer</h3>
+          <p class="mode-screen-description">45 min</p>
+          <div class="left-slider"></div>
+          <div class="btn-start">Start</div>
+        </div>
+        <div class="temperature mode-screen-item">
+          <h3 class="mode-screen-title">Temperature</h3>
+          <p class="mode-screen-description">Cold</p>
+        </div>
+        <div class="load mode-screen-item">
+          <h3 class="mode-screen-title ">Load</h3>
+          <p class="mode-screen-description">Medium</p>
+          <div class="right-slider"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
 
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
